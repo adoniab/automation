@@ -5,7 +5,7 @@ import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.Before;
 import io.cucumber.java.After;
-
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -16,13 +16,26 @@ public class MyStepDefinitions {
 
     private WebDriver driver;
 
-    @Before
-    public void setUp() {
+  //  @Before
+  //  public void setUp() {
         // Set up Chrome driver using WebDriverManager
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-    }
+     //   WebDriverManager.chromedriver().setup();
+     //   driver = new ChromeDriver();
+   //     driver.manage().window().maximize();
+  //  }
+    @Before
+public void setUp() {
+    WebDriverManager.chromedriver().setup();
+
+    ChromeOptions options = new ChromeOptions();
+    options.addArguments("--headless");  // 👈 Required for Linux servers
+    options.addArguments("--no-sandbox");
+    options.addArguments("--disable-dev-shm-usage");
+    options.addArguments("--disable-gpu");
+    options.addArguments("--window-size=1920,1080");
+
+    driver = new ChromeDriver(options);
+}
 
     @Given("I open the browser and navigate to {string}")
     public void i_open_the_browser_and_navigate_to(String url) {
@@ -200,8 +213,8 @@ public class MyStepDefinitions {
     }
     @After
     public void tearDown() {
-//        if (driver != null) {
-//            driver.quit();  // Close the browser
-//        }
+        if (driver != null) {
+            driver.quit();  // Close the browser
+        }
     }
 }
