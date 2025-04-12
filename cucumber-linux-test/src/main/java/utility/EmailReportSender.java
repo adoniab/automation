@@ -8,8 +8,8 @@ import java.util.Properties;
 
 public class EmailReportSender {
     public static void main(String[] args) {
-        final String username = "adoniabhishek9@gmail.com";
-        final String password = "ikck slvm jeyc cdlf";
+        final String username = "";
+        final String password = "";
 
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
@@ -36,7 +36,8 @@ public class EmailReportSender {
             messageBodyPart.setText("Hi,\n\nPlease find the test report attached.\n\nThanks.");
 
             MimeBodyPart attachment = new MimeBodyPart();
-            attachment.attachFile(new File("target/cucumber-reports/html-report.html"));
+             attachment.attachFile(new File("target/cucumber-reports/html-report.html"));
+
 
             Multipart multipart = new MimeMultipart();
             multipart.addBodyPart(messageBodyPart);

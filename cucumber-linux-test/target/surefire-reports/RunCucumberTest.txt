@@ -1,13 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: RunCucumberTest
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 118.235 s <<< FAILURE! - in RunCucumberTest
-Open my website and verify functionality #2(Hello)  Time elapsed: 15.784 s  <<< FAILURE!
+Tests run: 8, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 73.482 s <<< FAILURE! - in RunCucumberTest
+Open my website and verify functionality #2(Hello)  Time elapsed: 9.611 s  <<< FAILURE!
 java.lang.AssertionError
 
-Open my website and verify functionality #3(Hello)  Time elapsed: 19.111 s  <<< FAILURE!
-java.lang.AssertionError
-
-Open my website and verify functionality #7(Hello)  Time elapsed: 13.607 s  <<< FAILURE!
+Open my website and verify functionality #7(Hello)  Time elapsed: 6.523 s  <<< FAILURE!
 java.lang.AssertionError
 

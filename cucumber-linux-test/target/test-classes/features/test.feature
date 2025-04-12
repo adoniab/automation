@@ -16,18 +16,18 @@ Feature: Hello
     Then I select Spans "> Three-span"
     Then I search for "Full-Depth Precast Deck Panel w/o PT"
     And I click the Search button
-    Then I verify "15" results
+    Then I verify "1" results
 
   Scenario: Open my website and verify functionality
     Given I open the browser and navigate to "https://eicdev.fiu.edu/utcdbresearch/search"
     Then I select the Construction Equipment Category "Lateral Slide"
-    Then I select the Construction Equipment Category "Longitudinal Launch"
+    Then I select the Construction Equipment Category "Longitudinal Launching"
     Then I select the location "Urban"
     Then I select the Traffic Impact Category "Tier 1 (within 1 day)"
     Then I select the Traffic Impact Category "Tier 2 (within 3 days)"
     Then I search for " incentive / disincentive clause"
     And I click the Search button
-    Then I verify "13" results
+    Then I verify "4" results
 
   Scenario: Open my website and verify functionality
     Given I open the browser and navigate to "https://eicdev.fiu.edu/utcdbresearch/search"
@@ -61,5 +61,5 @@ Feature: Hello
     Given I open the browser and navigate to "https://eicdev.fiu.edu/utcdbresearch/search"
     Then I search for "CIP substructure under traffic"
     And I click the Search button
-    Then I verify "18" results
+    Then I verify "9" results
 

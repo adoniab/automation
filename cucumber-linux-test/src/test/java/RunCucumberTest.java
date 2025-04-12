@@ -5,11 +5,12 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
     features = "src/test/resources/features",
-
     glue = "stepDefinitions",
-    plugin = {"pretty",
-    "html:target/cucumber-reports/html-report.html"
-    }
+    plugin = {
+        "pretty",
+        "html:target/cucumber-reports/html-report.html"
+    },
+     monochrome = true  
 )
 public class RunCucumberTest {
 }
